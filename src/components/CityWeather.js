@@ -14,7 +14,7 @@ const CityWeather = (props) => {
   useEffect(() => {
     axios
       .get(
-        `http://dataservice.accuweather.com/locations/v1/${params.cityKey}?apikey=bytLxjgrYsvwUNI0ifb5e3hJRxZ4jLGw`
+        `https://dataservice.accuweather.com/locations/v1/${params.cityKey}?apikey=bytLxjgrYsvwUNI0ifb5e3hJRxZ4jLGw`
       )
       .then((response) => {
         setCityName(response.data);
@@ -25,7 +25,7 @@ const CityWeather = (props) => {
   useEffect(() => {
     axios
       .get(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${params.cityKey}?apikey=bytLxjgrYsvwUNI0ifb5e3hJRxZ4jLGw&language=fr-FR`
+        `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${params.cityKey}?apikey=bytLxjgrYsvwUNI0ifb5e3hJRxZ4jLGw&language=fr-FR`
       )
       .then((response) => {
         setCityData(response.data);
