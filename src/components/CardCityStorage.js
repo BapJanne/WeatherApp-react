@@ -20,6 +20,7 @@ const CardCityStorage = (props) => {
         <div
           className="cardCityStorage"
           onClick={() => {
+            window.location.reload();
             removeToProfil(props);
           }}
         >
