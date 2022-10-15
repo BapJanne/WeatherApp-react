@@ -5,6 +5,7 @@ const OtherDayCardComp = (props) => {
   const dateFormater = (date) => {
     const [currentDate, time] = date.split("T");
     const [year, month, day] = currentDate.split("-");
+    console.log(time);
     return `${day}/${month}/${year}`;
   };
 
