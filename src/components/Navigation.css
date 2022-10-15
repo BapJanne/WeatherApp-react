@@ -1,0 +1,25 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: azure;
+  width: 100vw;
+  height: 60px;
+}
+
+.linkContainer {
+  padding: 35px;
+  color: red;
+}
+
+.link {
+  color: black;
+  outline: none;
+  text-decoration: none;
+  padding: 20px;
+  position: relative;
+  top: 20px;
+}
+.link:visited {
+  outline: none;
+}

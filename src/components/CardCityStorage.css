@@ -1,0 +1,8 @@
+.cardCityStorage {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: max-content;
+  font-size: 16px;
+}

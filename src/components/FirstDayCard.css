@@ -1,0 +1,24 @@
+.firstDayContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.firstDayHr {
+  margin: 20px auto;
+}
+
+@media screen and (min-width: 900px) {
+  .firstDayWeather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+  }
+  .firstDayHr {
+    width: 1px;
+    height: 100px;
+  }
+}
