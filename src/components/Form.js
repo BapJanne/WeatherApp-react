@@ -8,15 +8,21 @@ const Form = () => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    if (search) {
-      async function fetchData() {
-        let response = await axios.get(
-          `https://dataservice.accuweather.com/locations/v1/cities/FR/autocomplete?apikey=bytLxjgrYsvwUNI0ifb5e3hJRxZ4jLGw&q=${search}&language=fr-FR`
-        );
-        setCitiesData(response.data);
+    const timer = setTimeout(() => {
+      if (search) {
+        async function fetchData() {
+          let response = await axios.get(
+            `https://dataservice.accuweather.com/locations/v1/cities/FR/autocomplete?apikey=bytLxjgrYsvwUNI0ifb5e3hJRxZ4jLGw&q=${search}&language=fr-FR`
+          );
+          setCitiesData(response.data);
+        }
+        fetchData();
       }
-      fetchData();
-    }
+    }, 500);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [search]);
 
   const displayData = () => {
